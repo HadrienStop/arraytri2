@@ -11,8 +11,7 @@ public class InsertionSortedArrayWithCounting extends ArrayWithCounting
     /**
      * Constructeur d'objets de classe InsertionSortedArraywithCounting
      */
-    public InsertionSortedArrayWithCounting()
-    {
+    public InsertionSortedArrayWithCounting() {
         super(); 
     }
 
@@ -25,14 +24,13 @@ public class InsertionSortedArrayWithCounting extends ArrayWithCounting
      *  à partir de la case i jusqu'à la case j-1 (le contenu écrasé de la 
      *  case j est retourné par la méthode)  
      */
-    public int ShiftArray(int i, int j)
-    {
-     int val = get(j);    
-     
-     for (int l = j; l > i ; l--) set(get(l-1),l);
-        
-     return val;
-    }  
+    public int ShiftArray(int i, int j) {
+        int val = get(j);
+        for (int l = j; l > i ; l--){
+         set(get(l-1),l);
+        }
+        return val;
+    }
     
 
     
