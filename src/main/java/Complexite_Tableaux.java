@@ -14,15 +14,14 @@ public class Complexite_Tableaux
     public static void main(String[] args) throws IOException {
  
      SelectionSortedArrayWithCounting tab = new SelectionSortedArrayWithCounting();
-     
-     tab.fillwithRandom(40,20);
 
      Writer file = new FileWriter("triInsertion.dat");
 
-     tab.SelectionSorting();
 
-     for(int i = 0 ; i < tab.length() ; i++) {
-       file.write("" + String.valueOf(tab.getreadCount()) + " " + String.valueOf(tab.getwriteCount()) + " " + String.valueOf(tab.getlessCount()) + "\n");
+     for(int i = 1 ; i < 1000 ; i++) {
+         tab.fillwithRandom(i,20);
+         tab.SelectionSorting();
+         file.write(i + " " + String.valueOf(tab.getreadCount()) + " " + String.valueOf(tab.getwriteCount()) + " " + String.valueOf(tab.getlessCount()) + "\n");
      }
      file.close();
 
@@ -37,6 +36,8 @@ public class Complexite_Tableaux
      System.out.println("nombre de comparaisons : "
            +String.valueOf(tab.getlessCount()));         
     }
+
+
 }
     
     
